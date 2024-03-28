@@ -3,21 +3,19 @@
     <head>
         <meta charset='utf-8'>
         <title>수원하이텍고등학교 팔로우이벤트</title>
-        <link rel='stylesheet' href='place_index.css'>
-        <script src="start_index.js"></script>
+        <link rel='stylesheet' href='index.css'>
+        <script src="index.js"></script>
     </head>
     <body>
         <header>
-            <button onclick="login_html()">저장결과 확인하기</button>
-            <a href="login.html">저장결과 확인하기</a>
+            <button class="loginsite" onclick="login_html()">저장정보확인</button>
             <img class = "suwonhightech" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRftGWUVQa-WLeyAy34SetaOLts05ipxDzZXg&usqp=CAU" \
                 style = "width: 240px; height: 47px;" alt="수원하이텍고등학교 학생자치회">
         </header> 
             <div class = "container">
-                <span>
+                <div>
                     <input class="input" id="rcdnum" type="text" placeholder="학번을 입력하세요.">
-                </span>
-                <div id="existingForm"></div>
+                </div>
                 <div class="btn-1">
                     <button id="btn1" onclick = "key_press('1')">1</button>
                     <button id="btn2" onclick = "key_press('2')">2</button>
