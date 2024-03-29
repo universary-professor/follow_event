@@ -3,10 +3,15 @@
     <head>
         <meta charset='utf-8'>
         <title>수원하이텍고등학교 팔로우이벤트 정보저장</title>
-        <link rel='stylesheet' href='follow_event.css'>
-        <script src="follow_event.js"></script>
+        <link rel='stylesheet' href='storage.css'>
+        <script src="storage.js"></script>
     </head>
     <body>
+        <h2>저장된 값 목록</h2>
+        <p id="num_data">저장된 인원수 :</p>
+        <button onclick = "reset()">초기화</button>
+        <button onclick = "selecting()">추첨하러가기</button>
+        <ul id="displayList"></ul>
         <span id ="datas"></span>
     </body>
 </html>

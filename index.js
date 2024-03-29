@@ -1,3 +1,7 @@
+function login_html() {
+  document.location.href = "storage.html";
+}
+
 function key_press(number) {
   var rcdnumElement = document.querySelector(".input");
   if (rcdnumElement !== null) {
@@ -16,8 +20,24 @@ function reset_num() {
   }
 }
 
-function login_html() {
-  document.location.href = "storage.html";
+function checkAndSend() {
+  var userInput = document.getElementById("rcdnum").value;
+  if (
+    !isNaN(userInput) &&
+    userInput.length == 4 &&
+    userInput / 1000 >= 1 &&
+    userInput / 1000 < 4
+  ) {
+    var storedInputs = JSON.parse(localStorage.getItem("storedInputs")) || [];
+    storedInputs.push(userInput);
+    localStorage.setItem("storedInputs", JSON.stringify(storedInputs));
+  } else {
+    alert("입력값을 확인하세요.");
+  }
+  var rcdnumElement = document.getElementById("rcdnum");
+  if (rcdnumElement !== null) {
+    rcdnumElement.value = "";
+  }
 }
 
 // 엑셀사용시
@@ -40,23 +60,3 @@ function login_html() {
 //         rcdnumElement.value = "";
 //     }
 // }
-
-function checkAndSend() {
-  let userInput = document.getElementById("rcdnum").value;
-  if (
-    !isNaN(userInput) &&
-    userInput.length == 4 &&
-    userInput / 1000 >= 1 &&
-    userInput / 1000 < 4
-  ) {
-    localStorage.setItem("storedValue", userInput); //user_input값을 조정해야될듯
-    // window.location.href = "storage.html";//요곤 진짜로 storge사이트로 이동
-    alert("값이 저장되었습니다.")
-  } else {
-    alert("입력값을 확인하세요.");
-  }
-  var rcdnumElement = document.getElementById("rcdnum");
-    if (rcdnumElement !== null) {
-      rcdnumElement.value = "";
-    }
-}

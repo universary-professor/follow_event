@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset='utf-8'>
-        <title>추첨하기</title>
-        <link rel='stylesheet' href=''>
-        <script src="follow_event.js"></script>
-    </head>
-    <body>
-        <container>
-            <input class="nickname" id="nickname" type="text" >
-            <input class="password" id="password" type="password">
-            <button onclick="Login()">Login</button>
-        </container>
-    </body>
+<head>
+    <meta charset='utf-8'>
+    <title>당첨자 추첨</title>
+    <link rel='stylesheet' href='storage.css'>
+    <script src="selecting.js"></script>
+</head>
+<body>
+    <h2>추첨하기</h2>
+    <button onclick="re_turn()">돌아가기</button>
+    <div id="winners"></div>
+    <label for="numberOfWinners">추첨 인원 수:</label>
+    <input type="number" id="numberOfWinners" min="1" value="1">
+    <button onclick="selecting()">추첨하기</button>
+</body>
 </html>
