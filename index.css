@@ -29,7 +29,7 @@ header{
     margin: 0;
 }
 
-body {
+/* body {
     background-position-y: top;
     margin-top: 50px;
     padding-top: -50px;
@@ -38,8 +38,8 @@ body {
     background-position-x: 50%;
     bottom: 0;
     background-size: 800px;
-    /* object-fit: cover; */
-}
+    object-fit: cover;
+} */
 
 .container{
     position: relative;

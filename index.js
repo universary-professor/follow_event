@@ -17,7 +17,7 @@ function reset_num() {
 }
 
 function login_html() {
-  document.location.href = "storge.html";
+  document.location.href = "storage.html";
 }
 
 // 엑셀사용시
@@ -41,23 +41,22 @@ function login_html() {
 //     }
 // }
 
-let input = document.getElementById("rcdnum").value;
-const check = document.getElementById("check");
 function checkAndSend() {
-  let userInput = input.value;
+  let userInput = document.getElementById("rcdnum").value;
   if (
     !isNaN(userInput) &&
     userInput.length == 4 &&
     userInput / 1000 >= 1 &&
     userInput / 1000 < 4
   ) {
-    localStorage.setItem("user_input", userInput);
-    window.location.href = "storge.html";
+    localStorage.setItem("storedValue", userInput); //user_input값을 조정해야될듯
+    // window.location.href = "storage.html";//요곤 진짜로 storge사이트로 이동
+    alert("값이 저장되었습니다.")
   } else {
     alert("입력값을 확인하세요.");
   }
-  var rcdnumElement = document.getElementById("rcdnum"); //여기서 문제가 나는게 아닌가
-  if (rcdnumElement !== null) {
-    rcdnumElement.value = "";
-  }
+  var rcdnumElement = document.getElementById("rcdnum");
+    if (rcdnumElement !== null) {
+      rcdnumElement.value = "";
+    }
 }
